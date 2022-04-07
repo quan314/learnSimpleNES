@@ -12,7 +12,7 @@ namespace sn
 
 int main(int argc, char** argv)
 {
-    std::ofstream logFile ("simplenes.log"), cpuTraceFile;
+    std::ofstream logFile ("simplenes.log"), cpuTraceFile;           //设置日志
     sn::TeeStream logTee (logFile, std::cout);
 
     if (logFile.is_open() && logFile.good())
@@ -24,14 +24,14 @@ int main(int argc, char** argv)
 
     std::string path;
 
-    //Default keybindings
+    //Default keybindings    //设置默认键位 sfml库 键盘
     std::vector<sf::Keyboard::Key> p1 {sf::Keyboard::J, sf::Keyboard::K, sf::Keyboard::RShift, sf::Keyboard::Return,
                                        sf::Keyboard::W, sf::Keyboard::S, sf::Keyboard::A, sf::Keyboard::D},
                                    p2 {sf::Keyboard::Numpad5, sf::Keyboard::Numpad6, sf::Keyboard::Numpad8, sf::Keyboard::Numpad9,
                                        sf::Keyboard::Up, sf::Keyboard::Down, sf::Keyboard::Left, sf::Keyboard::Right};
     sn::Emulator emulator;
 
-    for (int i = 1; i < argc; ++i)
+    for (int i = 1; i < argc; ++i)          //读取
     {
         std::string arg (argv[i]);
         if (arg == "-h" || arg == "--help")
