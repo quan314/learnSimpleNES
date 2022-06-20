@@ -7,6 +7,9 @@
 namespace sn
 {
     using Byte = std::uint8_t;
+    /*
+    手柄
+    */
     class Controller
     {
     public:
@@ -28,7 +31,7 @@ namespace sn
         Byte read();
         void setKeyBindings(const std::vector<sf::Keyboard::Key>& keys);
     private:
-        bool m_strobe;
+        bool m_strobe;           //选中脉冲
         unsigned int m_keyStates;
 
         std::vector<sf::Keyboard::Key> m_keyBindings;

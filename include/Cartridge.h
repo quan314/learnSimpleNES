@@ -9,7 +9,7 @@ namespace sn
     using Byte = std::uint8_t;
     using Address = std::uint16_t;
 
-    class Cartridge
+    class Cartridge     //卡带
     {
         public:
             Cartridge();

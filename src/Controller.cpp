@@ -21,7 +21,7 @@ namespace sn
         m_keyBindings = keys;
     }
 
-    void Controller::strobe(Byte b)
+    void Controller::strobe(Byte b)     //处理按键选中状态
     {
         m_strobe = (b & 1);
         if (!m_strobe)

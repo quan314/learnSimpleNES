@@ -15,7 +15,9 @@ namespace sn
         OneScreenHigher,
     };
 
-
+/*
+动态改变地址映射，实现存储空间的扩展
+*/
     class Mapper
     {
         public:

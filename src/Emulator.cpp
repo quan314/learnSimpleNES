@@ -60,7 +60,11 @@ namespace sn
         m_cpu.reset();
         m_ppu.reset();
 
-        m_window.create(sf::VideoMode(NESVideoWidth * m_screenScale, NESVideoHeight * m_screenScale),
+
+		sf::VideoMode vm= sf::VideoMode(NESVideoWidth * m_screenScale, NESVideoHeight * m_screenScale);
+		
+		sf::Window window(sf::VideoMode(640, 480, 32), "SFML Window", sf::Style::Default, sf::ContextSettings(32));
+       m_window.create(vm,
                         "SimpleNES", sf::Style::Titlebar | sf::Style::Close | sf::Style::Resize);
         m_window.setVerticalSyncEnabled(true);
         m_emulatorScreen.create(NESVideoWidth, NESVideoHeight, m_screenScale, sf::Color::White);
