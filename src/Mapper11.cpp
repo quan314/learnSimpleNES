@@ -1,5 +1,6 @@
 #include "Mapper11.h"
 #include "Log.h"
+#pragma warning(default:4716)
 namespace sn
 {
 
@@ -53,8 +54,10 @@ namespace sn
     void Mapper11::writeCHR(Address address, Byte value)
     {}
 
-    
+
     const Byte *Mapper11::getPagePtr(Address address)
-    {}
+    {
+		
+	}
 
 }
