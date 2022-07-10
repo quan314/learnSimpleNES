@@ -17,6 +17,9 @@ namespace sn
 
     const int AttributeOffset = 0x3C0;
 
+/*
+负责屏幕显示的处理单元
+*/
     class PPU
     {
         public:
